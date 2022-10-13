@@ -16,7 +16,7 @@ const config = {
   devServer: {
     static: path.join(__dirname, "dist"),
     watchFiles: ['src/**/*'],
-    host: "0.0.0.0",
+    host: "localhost",
     port: "8080",
     open: true,
     compress: true,
@@ -36,6 +36,7 @@ const config = {
       patterns: [
         { from: "src/index.html", to: "index.html" },
         { from: "src/images/favicon-32x32.png", to: "favicon-32x32.png" },
+        { from: "images/**/*", context: "src/"}
       ],
     }),
   ],
